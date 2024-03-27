@@ -4,6 +4,7 @@ import { TiLocationOutline } from "react-icons/ti";
 import { IoPeople } from "react-icons/io5";
 import { RiPagesLine } from "react-icons/ri";
 import PageToRead from "../Pages/PageToRead/PageToRead";
+import { Link } from "react-router-dom";
 
 
 
@@ -56,8 +57,6 @@ const ReadBooks = () => {
 <div> <a href="" className="bg-[#23BE0A] text-base md:text-lg font-semibold text-white p-[2px] md:p-2 rounded-lg">View Details </a> </div>
 
 </div>
-<PageToRead book={book}></PageToRead>
-
 
             </div>
           </div>

@@ -2,14 +2,18 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 import { BookContext } from '../../Component/BookShow'
 import useBookState from '../../Component/CustomHook/useBookState';
+import { getToLocalReads } from '../../Utilities/Storage';
 
-const PageToRead = ({book}) => {
-   
-
-  for(let books of book){
-    bookData.push(books)
-  }
-  console.log(bookData);
+const PageToRead = () => {
+    const [books,setBooks]=useState([])
+useEffect(()=>{
+    const book=getToLocalReads()
+const booking=book.map((book)=>(
+{ name:book.bookName,
+    rating:book.rating,
+}, setBooks(booking),
+))
+},[])
     // const { bookId, bookName, rating } = useContext(BookContext);
     // console.log(bookId);
 
