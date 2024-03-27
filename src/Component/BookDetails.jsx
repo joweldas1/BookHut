@@ -19,7 +19,7 @@ const BookDetails = () => {
     tags,
     yearOfPublishing,
   } = book;
-
+console.log(book);
 
 const handleToSave=(book)=>{
   confirmAction(book,"read")
@@ -58,7 +58,7 @@ const handleBookmark=(book)=>{
               <p className="flex gap-3 bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] font-semibold workFair py-1 px-3 rounded-xl ">
                 {tags.map((t, idx) => (
                   <p className="" key={idx}>
-                    #{t}
+                    # {t}
                   </p>
                 ))}
               </p>

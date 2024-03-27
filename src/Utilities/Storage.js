@@ -6,15 +6,17 @@ const getToLocalReads=()=>{
     if(storedBook){
         return JSON.parse(storedBook)
         
-    }return []
+    }return [];
 }
 const getToLocalBookmarks=()=>{
     const storedBook=localStorage.getItem("books2")
     if(storedBook){
         console.log(storedBook)
         return JSON.parse(storedBook)
-    }return []
+    }return []; 
 }
+
+
 
 const confirmAction = (book, actionType) => {
     const read = getToLocalReads();
@@ -70,7 +72,7 @@ const confirmAction = (book, actionType) => {
 // }
 
 const deleteItems=(id)=>{
-    const books=getToLocal();
+    const books=getToLocalReads();
     const remaining=books.filter(book=>book.id!==id)
     localStorage.setItem("books",JSON.stringify(remaining))
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -11,9 +12,9 @@ const Hero = () => {
             </h1>
 
             <div className="flex flex-col space-y-4 mt-10 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-              <a className="btn bg-[#23BE0A] text-white hover:text-black hover:border-[#23BE0A] hover:bg-transparent">
+              <Link to="listedBooks" className="btn bg-[#23BE0A] text-white hover:text-black hover:border-[#23BE0A] hover:bg-transparent">
                 View The List
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
