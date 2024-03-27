@@ -19,11 +19,11 @@ color:isActive?"#23BE0A":""
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><NavLink style={navLink} to="/">Home</NavLink></li>
-        <li><NavLink style={navLink} to="/listedBooks ">Listed Books</NavLink> </li>
-        <li><NavLink style={navLink} to="/pagesToRead">Listed Books</NavLink> </li>
+        <li><NavLink style={navLink} to="/listedBooks">Listed Books</NavLink> </li>
+        <li><NavLink style={navLink} to="/pagesToRead">Page To Read</NavLink> </li>
       </ul>
     </div>
-    <a className="btn btn-ghost workFair text-2xl font-bold">Book Hut</a>
+    <NavLink   to="/" className="btn btn-ghost workFair text-2xl font-bold">Book Hut</NavLink>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className=" menu-horizontal gap-9 px-1 workFair opacity-90  bg-transparent">

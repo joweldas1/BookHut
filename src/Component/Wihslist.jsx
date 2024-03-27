@@ -43,7 +43,7 @@ const Wishlist = () => {
                     ))}
                   </p>
                 </div>
-                <p className="flex  items-center gap-1 md:text-lg font-semibold">
+                <p className="flex  items-center gap-1 mt-2 text-lg font-semibold">
                   {" "}
                   <TiLocationOutline /> Year of Publishing{" "}
                   {book.yearOfPublishing}{" "}
@@ -51,7 +51,7 @@ const Wishlist = () => {
               </div>
               {/* ------------------------------------ */}
               <div>
-                <div className="text-lg font-medium  flex gap-6">
+                <div className="text-lg font-medium  mt-3 md:flex gap-6">
                   <p className="flex items-center gap-1">
                     {" "}
                     <IoPeople /> Publisher: {book.publisher}{" "}
@@ -73,7 +73,7 @@ const Wishlist = () => {
                 </div>
                 <div>
                   {" "}
-                  <h3 className="text-base md:text-lg font-medium text-[#FFAC33] bg-[#FFAC33] bg-opacity-20 inline-block p-[2px] md:p-2 rounded-xl ">
+                  <h3 className="text-base md:text-lg mt-2 font-medium text-[#FFAC33] bg-[#FFAC33] bg-opacity-20 inline-block p-[2px] md:p-2 rounded-xl ">
                     {" "}
                     Category: {book.rating}{" "}
                   </h3>{" "}

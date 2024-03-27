@@ -54,7 +54,8 @@ const router = createBrowserRouter([
       },
       {
         path:"/pagesToRead",
-        element:<PageToRead></PageToRead>
+        element:<PageToRead></PageToRead>,
+
       }
     ]
   },

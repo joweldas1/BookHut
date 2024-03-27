@@ -11,7 +11,6 @@ const getToLocalReads=()=>{
 const getToLocalBookmarks=()=>{
     const storedBook=localStorage.getItem("books2")
     if(storedBook){
-        console.log(storedBook)
         return JSON.parse(storedBook)
     }return []; 
 }

@@ -1,8 +1,8 @@
 import toast from "react-hot-toast";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { confirmAction } from "../Utilities/Storage";
-
+// export const BooksContext=createContext()
 const BookDetails = () => {
   const books = useLoaderData();
   const { bookId } = useParams();
@@ -19,7 +19,7 @@ const BookDetails = () => {
     tags,
     yearOfPublishing,
   } = book;
-console.log(book);
+  console.log(book);
 
 const handleToSave=(book)=>{
   confirmAction(book,"read")
@@ -30,9 +30,11 @@ const handleBookmark=(book)=>{
 
 
 
-
   return (
-    <div>
+    //  <BooksContext.Provider value={book} >
+    //        </BooksContext.Provider>
+
+        <div>
       <section className="dark:bg-gray-100 dark:text-gray-800">
         <div className="container flex flex-col items-center     mx-auto lg:flex-row">
           <div className="w-full lg:w-1/3">
@@ -55,13 +57,13 @@ const handleBookmark=(book)=>{
             </p>
             <div className="flex gap-2 items-center">
               <strong className="">Tag</strong>
-              <p className="flex gap-3 bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] font-semibold workFair py-1 px-3 rounded-xl ">
+              <div className="flex gap-3 bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] font-semibold workFair py-1 px-3 rounded-xl ">
                 {tags.map((t, idx) => (
                   <p className="" key={idx}>
                     # {t}
                   </p>
                 ))}
-              </p>
+              </div>
             </div>
 
             <div className="container p-2 mx-auto sm:p-4 text-[#131313] dark:text-gray-800">
@@ -107,6 +109,7 @@ const handleBookmark=(book)=>{
         </div>
       </section>
     </div>
+   
   );
 };
 
