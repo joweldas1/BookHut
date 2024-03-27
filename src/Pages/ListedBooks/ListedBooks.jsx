@@ -3,16 +3,33 @@ import { Link, Outlet, useLoaderData } from "react-router-dom";
 import ReadBooks from "../../Component/ReadBooks";
 
 const ListedBooks = () => {
-  const [index, setIndex] = useState(0);  
-  const book=useLoaderData()
+  const [index, setIndex] = useState(0);
+  const book = useLoaderData();
   return (
     <div>
       <div className="mt-10 mb-5">
         <h2 className="text-5xl text-center workFair font-bold    ">Books</h2>
         <div className="text-center mt-6">
-          <a className="btn bg-[#23BE0A] text-white hover:text-black hover:border-[#23BE0A] hover:bg-transparent">
-            Sort by
-          </a>
+          <div className="dropdown">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn bg-[#23BE0A] text-white hover:text-black hover:border-[#23BE0A] hover:bg-transparent"
+            >
+              SortBy
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       {/* tabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb */}
@@ -63,10 +80,8 @@ const ListedBooks = () => {
           <span>Wishlist</span>
         </Link>
       </div>
-    
-      <Outlet></Outlet>
 
-   
+      <Outlet></Outlet>
     </div>
   );
 };
