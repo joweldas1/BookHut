@@ -14,7 +14,7 @@ solid
       <div className="      border-dotted border-b-2 bg-opacity-75 border-slate-400 my-2 hover:border-b-purple-500 hover:border-solid hover:border-">
       <img  src={image}
           alt=""
-          className="object-cover object-center w-full rounded-md h-56 p-6 dark:bg-[#F3F3F3]"
+          className="mx-auto w-full h-[380px] rounded-md p-6 dark:bg-[#F3F3F3]"
         />
         <div className="mt-6 mb-2 flex justify-between">
         <a className="bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] font-bold workFair py-1 px-3 rounded-xl" href=""> {category} </a>

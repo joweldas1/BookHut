@@ -19,8 +19,8 @@ const ReadBooks = () => {
     <div>
       {book.map((book, idx) => (
         <div key={idx} className="p-3 border-2 border-black my-2 rounded-lg border-opacity-25">
-          <div className="md:flex  md:gap-11 items-center justify-center  md:px-20 ">
-            <div className="md:w-72">{book.image}</div>
+          <div className="md:flex  md:gap-28 items-center justify-center  md:px-20 ">
+            <div className="md:w-72"><img src={book.image} alt="" /></div>
 
             <div className="">
               <h3 className="text-2xl font-bold playFair text-[#131313]">{book.bookName}</h3>
