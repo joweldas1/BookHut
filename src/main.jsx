@@ -12,7 +12,7 @@ import MainPage from "./Pages/MainPage/MainPage";
 import ListedBooks from "./Pages/ListedBooks/ListedBooks";
 import BookDetails from "./Component/BookDetails";
 import ReadBooks from "./Component/ReadBooks";
-import Wihslist from "./Component/Wihslist";
+import Wishlist from "./Component/Wihslist";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
           },
           {
             path:'wishlist',
-            element:<Wihslist></Wihslist>,
+            element:<Wishlist></Wishlist>,
 
 
           }

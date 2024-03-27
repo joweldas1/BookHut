@@ -22,7 +22,7 @@ const BookData = () => {
             </div>
             <div className="grid grid-cols md:grid-cols-3 gap-6 mt-5">
             {
-                books.slice(0,show).map(book=> <BookShow key={book.id} book={book} ></BookShow> )
+                books.slice(0,show).map((book,idx)=> <BookShow key={idx} book={book} ></BookShow> )
             }
             </div>
             <div onClick={()=>shoMore(books.show)}  className={`text-center my-5 ${show===books.show?'hidden':''}`}><a className="btn bg-[#23BE0A] text-white hover:text-black hover:border-[#23BE0A] hover:bg-transparent">Show All</a></div>

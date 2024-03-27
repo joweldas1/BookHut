@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { saveToLocal } from "../Utilities/Storage";
+import { useState } from "react";
+import { confirmAction } from "../Utilities/Storage";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -9,24 +10,25 @@ const BookDetails = () => {
   const showBook=books.books
   const book = showBook?.find((book) => book.bookId === id);
   const {
-    author,
     image,
     review,
     totalPages,
     category,
     publisher,
-    rating,
+      rating,
     tags,
     yearOfPublishing,
   } = book;
 
 
 const handleToSave=(book)=>{
-
-   saveToLocal(book)
-
-
+  confirmAction(book,"read")
 }
+const handleBookmark=(book)=>{
+  confirmAction(book,"bookmark")
+}
+
+
 
 
   return (
@@ -41,9 +43,9 @@ const handleToSave=(book)=>{
             <h2 className="text-4xl text-[#131313] playFair  font-bold leading-none">
               {book.bookName}
             </h2>
-            <p className="mt-4 text-[#131313cc] text-lg workFair font-semibold">
-              By {author}
-            </p>
+            {/* <p className="mt-4 text-[#131313cc] text-lg workFair font-semibold">
+              By {`${book.author}?${book.author}:'null`}
+            </p> */}
 
             <p className="my-5 text-xl font-semibold workFair">{category}</p>
             <p className="text-lg workFair">
@@ -95,9 +97,9 @@ const handleToSave=(book)=>{
                   <a onClick={()=>handleToSave(book)} className="btn px-6 bg-white text-black border-black border-1 rounded-lg text-lg hover:bg-[#23BE0A]">
                     Read
                   </a>
-                  <Link to="wihslist" className="btn  bg-[#50B1C9] text-white text-lg rounded-lg hover:border-black hover:text-black">
+                  <a onClick={()=>handleBookmark(book)} className="btn  bg-[#50B1C9] text-white text-lg rounded-lg hover:border-black hover:text-black">
                     Wishlist
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
