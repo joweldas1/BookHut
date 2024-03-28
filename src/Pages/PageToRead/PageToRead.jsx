@@ -27,7 +27,7 @@ const PageToRead = () => {
 
   return (
     <>
-<div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height:'80vh'}}>
+<div style={{display: 'flex', justifyContent: 'center', alignItems:'center', height:'100vh'}}>
 <ResponsiveContainer className="w-full" height={250}>
 <BarChart data={data}>
   <CartesianGrid strokeDasharray="3 3" />

@@ -3,6 +3,7 @@ import { getToLocalBookmarks } from "../Utilities/Storage";
 import { TiLocationOutline } from "react-icons/ti";
 import { IoPeople } from "react-icons/io5";
 import { RiPagesLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Wishlist = () => {
   const [bookmark, setBookMark] = useState([]);
@@ -35,13 +36,13 @@ const Wishlist = () => {
               <div className="md:flex my-3 md:my-5">
                 <div className="flex gap-2 md:items-center text-lg">
                   <strong className="">Tags</strong>
-                  <p className="flex text-base md:text-lg gap-1 bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] font-semibold workFair py-1 px-3 rounded-xl ">
+                  <div className="flex text-base md:text-lg gap-1 bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] font-semibold workFair py-1 px-3 rounded-xl ">
                     {book.tags.map((t, idx) => (
                       <p className="" key={idx}>
                         #{t}
                       </p>
                     ))}
-                  </p>
+                  </div>
                 </div>
                 <p className="flex  items-center gap-1 mt-2 text-lg font-semibold">
                   {" "}
@@ -80,12 +81,11 @@ const Wishlist = () => {
                 </div>
                 <div>
                   {" "}
-                  <a
-                    href=""
+                  <Link to={`/book/${book.bookId}`}
                     className="bg-[#23BE0A] text-base md:text-lg font-semibold text-white p-[2px] md:p-2 rounded-lg"
                   >
                     View Details{" "}
-                  </a>{" "}
+                  </Link>{" "}
                 </div>
               </div>
             </div>

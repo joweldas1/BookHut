@@ -4,7 +4,6 @@ import ReadBooks from "../../Component/ReadBooks";
 
 const ListedBooks = () => {
   const [index, setIndex] = useState(0);
-  const book = useLoaderData();
   return (
     <div>
       <div className="mt-10 mb-5">

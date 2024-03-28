@@ -30,7 +30,7 @@ const confirmAction = (book, actionType) => {
         } else {
             read.push(book);
             localStorage.setItem('books', JSON.stringify(read));
-            toast.success('Read confirmed');
+            toast.success('Read Done');
         }
     } else if (actionType === 'bookmark') {
         if (isExist) {

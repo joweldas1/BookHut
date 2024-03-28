@@ -18,7 +18,7 @@ const BookDetails = () => {
       rating,
     tags,
     yearOfPublishing,
-  } = book;
+  } = book||{};
   console.log(book);
 
 const handleToSave=(book)=>{
