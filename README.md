@@ -1,11 +1,11 @@
 
 ## Book-Hut
 
-Book-A Library website where you can read books,also you can keep your your book in bookmark.Also you can see chart value according to you read books
+Book-Hut , A Library website where you can read books,also you can keep your  book in bookmark.Also you can see chart value according to you read books
 
 Live Link- https://book-hut.netlify.app
 
-## Installation
+## Installation and Materials
 
 Install my-project with npm and source using from
 
