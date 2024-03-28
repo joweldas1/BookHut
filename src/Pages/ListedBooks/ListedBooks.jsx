@@ -31,7 +31,6 @@ const ListedBooks = () => {
           </div>
         </div>
       </div>
-      {/* tabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb */}
       <div className="flex items-center  overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
         <Link
           to=""
