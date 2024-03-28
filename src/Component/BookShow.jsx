@@ -9,8 +9,7 @@ const BookShow = ({ book }) => {
   
   const { bookName, author, image, review, totalPages ,category ,publisher,generation,rating,bookId} = book;
   return (
-    // <BookContext.Provider value={{book}}>
-    // </BookContext.Provider>
+    
 
      <div className="bg-white rounded-lg">
       <Link to={`book/${bookId}`}>

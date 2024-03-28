@@ -1,13 +1,10 @@
-import toast from "react-hot-toast";
-import { Link, useLoaderData, useParams } from "react-router-dom";
-import { createContext, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 import { confirmAction } from "../Utilities/Storage";
-// export const BooksContext=createContext()
 const BookDetails = () => {
   const books = useLoaderData();
   const { bookId } = useParams();
   const id = parseInt(bookId);
-  const showBook=books.books
+  const showBook = books.books;
   const book = showBook?.find((book) => book.bookId === id);
   const {
     image,
@@ -15,26 +12,21 @@ const BookDetails = () => {
     totalPages,
     category,
     publisher,
-      rating,
+    rating,
     tags,
     yearOfPublishing,
-  } = book||{};
+  } = book || {};
   console.log(book);
 
-const handleToSave=(book)=>{
-  confirmAction(book,"read")
-}
-const handleBookmark=(book)=>{
-  confirmAction(book,"bookmark")
-}
-
-
+  const handleToSave = (book) => {
+    confirmAction(book, "read");
+  };
+  const handleBookmark = (book) => {
+    confirmAction(book, "bookmark");
+  };
 
   return (
-    //  <BooksContext.Provider value={book} >
-    //        </BooksContext.Provider>
-
-        <div>
+    <div>
       <section className="dark:bg-gray-100 dark:text-gray-800">
         <div className="container flex flex-col items-center     mx-auto lg:flex-row">
           <div className="w-full lg:w-1/3">
@@ -45,9 +37,6 @@ const handleBookmark=(book)=>{
             <h2 className="text-4xl text-[#131313] playFair  font-bold leading-none">
               {book.bookName}
             </h2>
-            {/* <p className="mt-4 text-[#131313cc] text-lg workFair font-semibold">
-              By {`${book.author}?${book.author}:'null`}
-            </p> */}
 
             <p className="my-5 text-xl font-semibold workFair">{category}</p>
             <p className="text-lg workFair">
@@ -96,10 +85,16 @@ const handleBookmark=(book)=>{
                 </table>
 
                 <div className="mt-6 mb-2 flex justify-start gap-5">
-                  <a onClick={()=>handleToSave(book)} className="btn px-6 bg-white text-black border-black border-1 rounded-lg text-lg hover:bg-[#23BE0A]">
+                  <a
+                    onClick={() => handleToSave(book)}
+                    className="btn px-6 bg-white text-black border-black border-1 rounded-lg text-lg hover:bg-[#23BE0A]"
+                  >
                     Read
                   </a>
-                  <a onClick={()=>handleBookmark(book)} className="btn  bg-[#50B1C9] text-white text-lg rounded-lg hover:border-black hover:text-black">
+                  <a
+                    onClick={() => handleBookmark(book)}
+                    className="btn  bg-[#50B1C9] text-white text-lg rounded-lg hover:border-black hover:text-black"
+                  >
                     Wishlist
                   </a>
                 </div>
@@ -109,7 +104,6 @@ const handleBookmark=(book)=>{
         </div>
       </section>
     </div>
-   
   );
 };
 
